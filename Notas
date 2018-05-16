@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Notas {
+	static int cont, cont1, cont2;
+	public static void calculaMédia(double n1, double n2, double media){
+		media = n1+ n2 /2;
+		System.out.println("A média é: " + media);
+	
+	}
+	public static void main(String []args){
+		Scanner teclado = new Scanner(System.in);
+		int denovo = 0;
+		double n1 = 0, n2 = 0, media = 0;
+	    int cont =0, cont1 = 0, cont2 = 0;
+        while(denovo != 2){
+        	System.out.println("Digite a nota 1: " + n1);
+        	n1 = teclado.nextDouble();
+        	System.out.println("Digite a nota 2: " + n2);
+        	n2 = teclado.nextDouble();
+        	calculaMédia(n1,n2,media);
+        	System.out.println("Deseja calcular a média novamente? Se sim digite 1, senão digite 2" + denovo);
+        	denovo = teclado.nextInt();
+        	if(media < 6 && media >=4.5){
+        		System.out.println("Aluno em exame");
+        		cont ++;
+        	}
+            if(media >= 6 && media <10){
+            	System.out.println("Aluno Aprovado");
+                cont1 ++; 
+            }
+            if(media <4.5){
+            	System.out.println("REPROVADO!!!");
+                cont2 ++;
+            }
+        }
+        }
+
+}
+
