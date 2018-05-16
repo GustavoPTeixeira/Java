@@ -1,0 +1,36 @@
+import java.io.IOException;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args)throws IOException{
+		Scanner leitor = new Scanner(System.in);
+		int matriz[][] = new int [101][];
+		int linhas = leitor.nextInt();
+		int colunas = leitor.nextInt();
+		for(int linha=0; linha<linhas; linha++){
+			matriz[linha] = new int[101];
+			for(int coluna = 0; coluna<colunas; coluna++){
+				matriz[linha][coluna] = leitor.nextInt();
+			}
+		}
+		int maior = 0;
+		for(int linha = 0; linha<linhas; linha++){
+			int soma = 0;
+			for(int coluna=0; coluna<colunas; coluna++)
+				soma += matriz[linha][coluna];
+				if(soma>maior)
+					maior = soma;
+				}
+		for(int coluna = 0; coluna<colunas; coluna++){
+			int soma = 0;
+			for(int linha=0; linha<linhas; linha++)
+				soma += matriz[linha][coluna];
+				if(soma>maior)
+					maior = soma;
+				}
+		System.out.println(maior);
+			}
+		
+}
+
+
+	
